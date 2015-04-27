@@ -1,0 +1,30 @@
+{
+  "name": "angular-utility",
+  "version": "1.0.0",
+  "description": "angularjs services, filters, directives as utility",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt-karma": "^0.10.1",
+    "grunt": "^0.4.5",
+    "jasmine-core": "^2.2.0",
+    "bower": "^1.4.1",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.8",
+    "karma-jasmine": "^0.3.5",
+    "load-grunt-tasks": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeonghwan-kim/angular-utility.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeonghwan-kim/angular-utility/issues"
+  },
+  "homepage": "https://github.com/jeonghwan-kim/angular-utility"
+}

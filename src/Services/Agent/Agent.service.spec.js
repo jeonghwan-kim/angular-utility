@@ -13,8 +13,8 @@ describe('Service: Agent', function () {
 
   it('should check brower\'s name', function () {
     var browsers = ['chrome', 'safari', 'firefox', 'ie', 'unknown'];
-    var browser = Agent.getName().toLowerCase();
-    var details = Agent.getDetails();
+    var browser = Agent.getName().toLowerCase(); // browser = "chrome" or "safari" or "firefox" or "ie" or "unknown"
+    var details = Agent.getDetails(); // details = "..."
 
     expect(browsers).toContain(browser);
     expect(new RegExp(browser).test(details.toLowerCase())).toBe(true);

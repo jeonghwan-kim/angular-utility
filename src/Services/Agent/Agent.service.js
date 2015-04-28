@@ -1,10 +1,10 @@
 /**
  * Get agent(web browser) name and details
+ * Created at 2015. 4. 27
  * Updated at 2015. 4. 27
  */
 
 'use strict';
-angular.module('chris.util', []);
 
 angular.module('chris.util')
     .service('Agent', function ($window) {

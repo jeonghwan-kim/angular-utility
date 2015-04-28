@@ -23,3 +23,11 @@ Related Project: STEP Journal, Dolboming
 [test code](https://github.com/jeonghwan-kim/angular-utility/blob/master/src%2FServices%2FAgent%2FAgent.service.spec.js)
 
 ## Filters
+
+### birthToAge
+Get age form birthday
+
+Related Project: Dolboming
+
+[soruce code](https://github.com/jeonghwan-kim/angular-utility/blob/master/src%2FFilters%2FbirthToAge%2FbirthToAge.filter.js),
+[test code](https://github.com/jeonghwan-kim/angular-utility/blob/master/src%2FFilters%2FbirthToAge%2FbirthToAge.filter.spec.js)

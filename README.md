@@ -31,3 +31,19 @@ Related Project: Dolboming
 
 [soruce code](https://github.com/jeonghwan-kim/angular-utility/blob/master/src%2FFilters%2FbirthToAge%2FbirthToAge.filter.js),
 [test code](https://github.com/jeonghwan-kim/angular-utility/blob/master/src%2FFilters%2FbirthToAge%2FbirthToAge.filter.spec.js)
+
+### encodeBits 
+Encode array of bits objects consist of code, name, checked properties
+
+Related Project: Dolboming
+
+[soruce code](https://github.com/jeonghwan-kim/angular-utility/blob/master/src%2FFilters%2FencodeBits%2FencodeBits.filter.js),
+[test code](https://github.com/jeonghwan-kim/angular-utility/blob/master/src%2FFilters%2FencodeBits%2FencodeBits.filter.spec.js)
+
+### decodeBits 
+Decode bit into array of bits objects consist of code, name, checked properties
+
+Related Project: Dolboming
+
+[soruce code](https://github.com/jeonghwan-kim/angular-utility/blob/master/src%2FFilters%2FdecodeBits%2FdecodeBits.filter.js),
+[test code](https://github.com/jeonghwan-kim/angular-utility/blob/master/src%2FFilters%2FdecodeBits%2FdecodeBits.filter.spec.js)

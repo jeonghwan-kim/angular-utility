@@ -1,0 +1,28 @@
+<html ng-app="chris.util">
+<head>
+    <title>Sample of custom-radio directive</title>
+    <link rel="stylesheet" href="./index.css"/>
+</head>
+<body ng-controller="IndexCtrl">
+
+    <div class="option-1" custom-radio data="data.choice" radio-id="option1">Option 1</div>
+    <div class="option-2" custom-radio data="data.choice" radio-id="option2">Option 2</div>
+
+    <!--<div>-->
+        <!--<input type="radio" ng-model="data.choice" id="option1" value="option1" />-->
+        <!--<label for="option1"><span></span><div>Option1</div></label>-->
+    <!--</div>-->
+    <!--<div>-->
+        <!--<input type="radio" ng-model="data.choice" id="option2" value="option2" />-->
+        <!--<label for="option2"><span></span><div>Option2</div></label>-->
+    <!--</div>-->
+
+
+    <pre>data: {{data|json}}</pre>
+
+    <script src="../../../bower_components/angular/angular.min.js"></script>
+    <script src="../../app.js"></script>
+    <script src="./custom-radio.directive.js"></script>
+    <script src="./index.controller.js"></script>
+</body>
+</html>

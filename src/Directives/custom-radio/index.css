@@ -1,3 +1,39 @@
-/**, html, body {*/
-    /*color: red;*/
-/*}*/
+/* Common */
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"] + label {
+}
+input[type="radio"] + label span.icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* Option1 */
+.option1 input[type="radio"] + label span.icon {
+    background: grey;
+}
+.option1 input[type="radio"]:checked + label span.icon {
+    background: red;
+}
+
+/* Option2 */
+.option2 input[type="radio"] + label span.icon {
+    background: grey;
+}
+.option2 input[type="radio"]:checked + label span.icon {
+    background: red;
+}
+
+/* Option3 */
+.option3 input[type="radio"] + label span.icon {
+    background: url('images/yeoman-gray-50x50.png');
+}
+.option3 input[type="radio"]:checked + label span.icon {
+    background: url('images/yeoman-color-50x50.png');
+}

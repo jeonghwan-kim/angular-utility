@@ -7,48 +7,26 @@
 'use strict';
 
 angular.module('chris.util')
-    .directive('customRadio', function ($log) {
+    .directive('customRadio', function ($log, $compile) {
       var tag = 'Directive:customRadio';
-      $log.debug(tag);
 
       return {
-        template:
-          '<div>' +
-            '<input type="radio" ng-model="" id="" value="" />' +
-            '<label for=""><span></span><span></span></label>' +
+        template: '<div><input type="radio" ng-model="choice" />' +
+            '<label for="1"><span class="icon"></span><span class="text"><ng-transclude></ng-transclude></span></label>' +
           '</div>',
         restrict: 'A',
+        transclude: true,
         scope: {
-          data: '=data'
+          choice: '='
         },
-        compile: function () {
-          return {
-            pre: function (scope, element, attrs) {
-              //$log.debug(tag, 'pre:', attrs.radioId);
-              //$log.debug(tag, 'pre: scope.data', scope.data);
-              element.find('input').attr('id', attrs.radioId);
-              element.find('input').attr('value', attrs.radioId);
-              element.find('label').attr('for', attrs.radioId);
-              //element.find('.text')[0].text(attrs.radioId);
-              $log.debug(tag, 'pre:', element.find('span'));
-              $log.debug(tag, 'pre:', element.find('span')[1].text(attrs.radioId));
-              element.find('span')[1].text('asdf');
-            },
-            post: function (scope, element, attrs) {
-              $log.debug(tag, 'post:', attrs.radioId);
-              $log.debug(tag, 'post: scope.data', scope.data);
-              //element.find('input').attr('id', attrs.radioId);
-              //element.find('input').attr('value', attrs.radioId);
-              //element.find('label').attr('for', attrs.radioId);
-              //scope.data = 'option3';
-            }
-          };
+        compile: function (element, attrs) {
+          element.find('input').attr('id', attrs.radioId);
+          element.find('input').attr('value', attrs.radioId);
+          element.find('label').attr('for', attrs.radioId);
+        },
+        link: function (scope, element, attrs) {
 
         }
-        //link: function (scope, element, attrs) {
-        //  $log.debug(tag, scope.radioId);
-        //  $log.debug(tag, scope.data);
 
-        //}
       };
     });

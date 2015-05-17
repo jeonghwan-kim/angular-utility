@@ -5,20 +5,13 @@
 </head>
 <body ng-controller="IndexCtrl">
 
-    <div class="option-1" custom-radio data="data.choice" radio-id="option1">Option 1</div>
-    <div class="option-2" custom-radio data="data.choice" radio-id="option2">Option 2</div>
+    <div class="option1" custom-radio choice="choice" radio-id="option1">First Option</div>
+    <div class="option2" custom-radio choice="choice" radio-id="option2">Second Option</div>
+    <div class="option3" custom-radio choice="choice" radio-id="option3">Second Option</div>
 
-    <!--<div>-->
-        <!--<input type="radio" ng-model="data.choice" id="option1" value="option1" />-->
-        <!--<label for="option1"><span></span><div>Option1</div></label>-->
-    <!--</div>-->
-    <!--<div>-->
-        <!--<input type="radio" ng-model="data.choice" id="option2" value="option2" />-->
-        <!--<label for="option2"><span></span><div>Option2</div></label>-->
-    <!--</div>-->
+    <hr/>
 
-
-    <pre>data: {{data|json}}</pre>
+    <tt>choice: {{choice}}</tt>
 
     <script src="../../../bower_components/angular/angular.min.js"></script>
     <script src="../../app.js"></script>

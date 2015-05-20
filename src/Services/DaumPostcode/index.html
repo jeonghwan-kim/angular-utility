@@ -1,0 +1,21 @@
+<html ng-app="chris.util">
+<head>
+  <title>Sample of DaumPostcode service</title>
+</head>
+<body ng-controller="IndexCtrl">
+  <p>
+    <button ng-click="search()">Search</button>
+  </p>
+  <p>
+    Result: <br />
+    <pre ng-bind="result|json"></pre>
+  </p>
+
+  <!-- Daum postcode library -->
+  <!--<script src="http://dmaps.daum.net/map_js_init/postcode.js"></script>-->
+  <script src="../../../bower_components/angular/angular.min.js"></script>
+  <script src="../../app.js"></script>
+  <script src="./DaumPostcode.service.js"></script>
+  <script src="./index.controller.js"></script>
+</body>
+</html>

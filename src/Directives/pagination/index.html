@@ -1,0 +1,14 @@
+<html ng-app="chris.util">
+<head>
+    <title>Sample of pagination directive</title>
+    <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.css"/>
+</head>
+<body ng-controller="IndexCtrl">
+    <div pagination num-pages="numPages" current-page="currentPage" on-select-page="selectPage(page)"></div>
+
+    <script src="../../../bower_components/angular/angular.min.js"></script>
+    <script src="../../app.js"></script>
+    <script src="./index.controller.js"></script>
+    <script src="./pagination.directive.js"></script>
+</body>
+</html>

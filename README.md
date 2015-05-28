@@ -6,6 +6,8 @@ angularjs services, filters, directives as utility
 
 **custom-radio**: Icon radio input. (Related Project: Tk)
 
+**pagination**: Pagination with twitter bootstrap stylesheet
+
 ## Services
 **Agent**: Detect browser name and details. (Related Project: STEP Journal, Dolboming)
 

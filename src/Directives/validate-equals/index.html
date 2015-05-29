@@ -1,0 +1,28 @@
+<html ng-app="chris.util">
+<head>
+  <title>Sample of pagination directive</title>
+  <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.css"/>
+</head>
+<body ng-controller="IndexCtrl">
+
+<form name="form">
+  <p>
+    compareValue: <br/>
+    <input type="text" name="compareValue" ng-model="model.compareValue"/>
+  </p>
+
+  <p>
+    testValue: <br/>
+    <input type="text" name="testValue" ng-model="model.testValue" validate-equals="model.compareValue"/>
+  </p>
+</form>
+
+<pre>model: {{model|json}}</pre>
+<pre>form: {{form|json}}</pre>
+
+<script src="../../../bower_components/angular/angular.min.js"></script>
+<script src="../../app.js"></script>
+<script src="./index.controller.js"></script>
+<script src="./validate-equals.directive.js"></script>
+</body>
+</html>

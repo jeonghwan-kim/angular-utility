@@ -30,7 +30,6 @@ angular.module('chris.util')
         replace: true,
         link: function (scope, element, attrs) {
           scope.$watch('numPages', function (value) {
-            console.log(tag, value);
             scope.pages = [];
             for (var i = 1; i <= value; i++) {
               scope.pages.push(i);
@@ -47,7 +46,7 @@ angular.module('chris.util')
           scope.selectPage = function (page) {
             if (!scope.isActive(page)) {
               scope.currentPage = page;
-              scope.onSelectPage({page: page});
+              scope.onSelectPage({page: page}); // ?
             }
           };
 

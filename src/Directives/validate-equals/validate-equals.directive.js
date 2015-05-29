@@ -14,8 +14,6 @@ angular.module('chris.util')
         restrict: 'A',
         link: function (scope, element, attrs, ngModelCtrl) {
           function validateEqual(myValue) {
-            console.log(tag, 'validateEqual()', myValue, scope.$eval(attrs.validateEquals));
-
             var valid = (myValue === scope.$eval(attrs.validateEquals));
             ngModelCtrl.$setValidity('equal', valid);
             return valid ? myValue : undefined;
@@ -25,8 +23,6 @@ angular.module('chris.util')
           ngModelCtrl.$formatters.push(validateEqual); // 모델 값이 변경되면 호출되는 함수 목록
 
           scope.$watch(attrs.validateEquals, function (val) {
-            console.log(tag, '$watch()', val, ngModelCtrl.$viewValue);
-
             //ngModelCtrl.$setViewValue(ngModelCtrl.$viewValue); // $parsers 파이프라인 동작
 
             // 위 코드대신 아래코드로 실행

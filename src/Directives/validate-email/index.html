@@ -1,0 +1,22 @@
+<html ng-app="chris.util">
+<head>
+  <title>Sample of email-validator directive</title>
+</head>
+<body ng-controller="IndexCtrl">
+
+<form name="form" novalidate>
+  <p>
+    email: <br/>
+    <input type="email" name="email" ng-model="email" validate-email/>
+  </p>
+</form>
+
+<pre>form.email: {{form.email|json}}</pre>
+<pre>scope.email: {{email|json}}</pre>
+
+<script src="../../../bower_components/angular/angular.min.js"></script>
+<script src="../../app.js"></script>
+<script src="./index.controller.js"></script>
+<script src="./validate-email.directive.js"></script>
+</body>
+</html>

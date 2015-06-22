@@ -24,7 +24,7 @@ angular.module('chris.util')
         this.groups.push(groupScope);
         groupScope.$on('$destroy', function (event) {
           that.removeGroup(groupScope);
-        });
+        }); // ?
       };
 
       this.removeGroup = function (group) {
@@ -39,8 +39,8 @@ angular.module('chris.util')
 angular.module('chris.util')
     .directive('accordion', function () {
       return {
-        restrict: 'EA',
-        controller: 'AccordionController',
+        restrict: 'E',
+        controller: 'AccordionController', // This is directive controller
         link: function (scope, element, attrs) {
           element.addClass('panel-group');
         }
@@ -50,7 +50,7 @@ angular.module('chris.util')
 angular.module('chris.util')
     .directive('accordionGroup', function () {
       return {
-        require: '^accordion',
+        require: '^accordion', // For using directive controller
         restrict: 'E',
         transclude: true,
         replace: true,

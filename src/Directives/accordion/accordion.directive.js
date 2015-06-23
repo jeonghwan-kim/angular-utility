@@ -54,7 +54,17 @@ angular.module('chris.util')
         restrict: 'E',
         transclude: true,
         replace: true,
-        templateUrl: './accordion-group.tpl.html',
+        template:
+          '<div class="accordion-group panel panel-default">' +
+            '<div class="panel-heading">' +
+              '<h4 class="panel-title">' +
+                '<a class="#" ng-click="isOpen =! isOpen">{{heading}}</a>' +
+              '</h4>' +
+            '</div>' +
+            '<div class="panel-body" ng-show="isOpen">' +
+              '<div class="" ng-transclude></div>' +
+            '</div>' +
+          '</div>',
         scope: {heading: '@'},
         link: function (scope, element, attrs, accordionCtrl) {
           accordionCtrl.addGroup(scope);

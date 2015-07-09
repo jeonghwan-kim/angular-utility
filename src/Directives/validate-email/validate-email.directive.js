@@ -1,14 +1,14 @@
 /**
  * Pagination
  * Created at 2015. 6. 1
- * Updated at 2015. 6. 1
+ * Updated at 2015. 7. 9
  */
 
 'use strict';
 
 angular.module('chris.util')
     .directive('validateEmail', function () {
-      var EMAIL_REGEXP = /^[a-z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-z0-9]+\.[a-z]{2,5}$/;
+      var EMAIL_REGEXP = /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,5}$/;
 
       return {
         require: 'ngModel',

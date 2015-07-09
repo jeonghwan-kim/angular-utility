@@ -33,6 +33,13 @@ describe('Directive: validate-email', function () {
     expect(ctrl.$viewValue).toBe($scope.email);
   });
 
+  it('should be valid', function () {
+    $scope.email = 'EJ88EJ.kim@gmail.com';
+    $scope.$digest();
+    expect(ctrl.$valid).toBeTruthy();
+    expect(ctrl.$viewValue).toBe($scope.email);
+  });
+
   it('should be invalid', function () {
     ctrl.$viewValue = 'ej88ej';
     $scope.$digest();

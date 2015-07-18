@@ -1,0 +1,25 @@
+<html ng-app="chris.util">
+<head>
+  <title>Sample of datetimepicker directive</title>
+  <meta charset="utf-8">
+</head>
+<body ng-controller="IndexCtrl">
+<link rel="stylesheet" href="../../../bower_components/datetimepicker/jquery.datetimepicker.css"/>
+<form name="form">
+  <p>
+    <lable>Sslect date:</lable>
+    <input type="text" name="date" ng-model="date" datetimepicker />
+  </p>
+</form>
+
+<pre>model: {{date|json}}</pre>
+<pre>form control: {{form.date|json}}</pre>
+
+<script src="../../../bower_components/angular/angular.min.js"></script>
+<script src="../../../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../../../bower_components/datetimepicker/jquery.datetimepicker.js"></script>
+<script src="../../app.js"></script>
+<script src="./index.controller.js"></script>
+<script src="./datetimepicker.directive.js"></script>
+</body>
+</html>

@@ -8,6 +8,16 @@ angularjs services, filters, directives as utility
 
 **pagination**: Pagination with twitter bootstrap stylesheet
 
+**accordion**: Accordion with twitter bootstrap
+
+**datetimepicker**: jQuery [datetimepicker](http://plugins.jquery.com/datetimepicker/) library
+
+**must-future-date**: Validate form value have to future date
+
+**validate-email**: Validte form value have to email format
+
+**validate-equals**: Validate form value have to equal to some value. (ex. repassword is have to the same as the password in account registration from)
+
 ## Services
 **Agent**: Detect browser name and details. (Related Project: STEP Journal, Dolboming)
 

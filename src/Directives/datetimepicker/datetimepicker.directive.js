@@ -15,16 +15,11 @@ angular.module('chris.util')
 
           if (!ngModelCtrl) return;
 
-          var updateModelValue = function () {
-                ngModelCtrl.$setViewValue(element[0].value)
-              },
-              options = {
+          var options = {
                 lang: 'ko',
                 value: ngModelCtrl.$modelValue || '',
                 format: 'Y-m-d H:i',
-                onSelectDate: updateModelValue,
-                onSelectTime: updateModelValue,
-                onClose: updateModelValue
+                validateOnBlur: false
               },
               validator = /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}$/;
 
@@ -40,7 +35,7 @@ angular.module('chris.util')
 
           $(element).datetimepicker(options);
 
-          ngModelCtrl.$validators.datetimeFormat = function (modelValue, viewValue) {
+          ngModelCtrl.$validators.datetimeFormat = function (modelValue) {
             return !modelValue || validator.test(modelValue);
           };
         }

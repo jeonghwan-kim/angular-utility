@@ -7,13 +7,27 @@
 <link rel="stylesheet" href="../../../bower_components/datetimepicker/jquery.datetimepicker.css"/>
 <form name="form">
   <p>
-    <lable>Sslect date:</lable>
-    <input type="text" name="date" ng-model="date" datetimepicker ng-required="true" />
+    <lable>Select date:</lable>
+    <input type="text" name="date" ng-model="date" datetimepicker />
+    <pre>model: {{date|json}}</pre>
+    <pre>form.date control: {{form.date|json}}</pre>
+  </p>
+
+  <p>
+    <lable>Select only date:</lable>
+    <input type="text" name="onlyDate" ng-model="onlyDate" datetimepicker="datepicker" />
+    <pre>model: {{onlyDate|json}}</pre>
+    <pre>form.onlyDate control: {{form.onlyDate|json}}</pre>
+  </p>
+
+  <p>
+    <lable>Select only time:</lable>
+    <input type="text" name="onlyTime" ng-model="onlyTime" datetimepicker="timepicker" ng-required="true" />
+    <pre>model: {{onlyTime|json}}</pre>
+    <pre>form.onlyTime control: {{form.onlyTime|json}}</pre>
   </p>
 </form>
 
-<pre>model: {{date|json}}</pre>
-<pre>form control: {{form.date|json}}</pre>
 
 <script src="../../../bower_components/angular/angular.min.js"></script>
 <script src="../../../bower_components/jquery/dist/jquery.min.js"></script>

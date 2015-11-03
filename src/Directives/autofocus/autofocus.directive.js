@@ -11,9 +11,7 @@ angular.module('chris.util')
       return {
         restrict: 'A',
         link: function (scope, element, attrs) {
-          //$timeout(function () {
-            element[0].focus();
-          //});
+          element[0].focus();
         }
       };
     });

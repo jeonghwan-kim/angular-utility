@@ -8,13 +8,34 @@ module.exports = function (grunt) {
   grunt.initConfig({
 
     karma: {
+      options: {
+        configFile: 'karma.conf.js'
+      },
       unit: {
-        configFile: 'karma.conf.js',
-        singleRun: true
+        singleRun: true,
+      },
+      continuous: {
+        background: true,
+        singleRun: false
+      }
+    },
+
+    watch: {
+      karma: {
+        files: ['src/**/*.js'],
+        tasks: ['karma:continuous:run']
       }
     }
 
   });
 
-  grunt.registerTask('default', ['karma']);
+  grunt.registerTask('unit-test', [
+    'karma:continuous:start',
+    'watch:karma'
+  ]);
+
+  grunt.registerTask('default', [
+    'karma:unit'
+  ]);
+
 };

@@ -34,3 +34,5 @@ angularjs services, filters, directives as utility
 
 **padding**: Padding number, ex: 0 into '00001' (Related Project: Dolboming)
 
+**phoneNumber**: Phone number format, ex: '01012345678' into '010-1234-5678'
+

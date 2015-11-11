@@ -15,7 +15,7 @@ module.exports = function (grunt) {
         singleRun: true,
       },
       continuous: {
-        background: true,
+        // background: true,
         singleRun: false
       }
     },
@@ -31,11 +31,15 @@ module.exports = function (grunt) {
 
   grunt.registerTask('unit-test', [
     'karma:continuous:start',
-    'watch:karma'
+    'watch:karma',
+  ]);
+
+  grunt.registerTask('test', [
+    'karma:unit'
   ]);
 
   grunt.registerTask('default', [
-    'karma:unit'
+    'unit-test'
   ]);
 
 };
